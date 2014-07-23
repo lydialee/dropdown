@@ -20,7 +20,6 @@ for (var k = 0; k < lis.length; k += 1) {
 	lis[k].onclick = function() {
 		var id = this.getAttribute('data-id');
 		showcase.style.backgroundColor = parseIdToColor(id);
-		// console.log(showcase.style.backgroundColor)
 	}	
 }
 
@@ -43,6 +42,5 @@ function parseIdToColor(id) {
 			color = _green
 			break;
 	}
-	console.log(color);
 	return color;
 }
