@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Obsserver Pattern</title>
+	<style>
+		section,button,li,ul,div{
+			margin: 0;
+			padding: 0;
+		}
+		section{
+			text-align: center;
+			line-height: 2;
+			float: left;
+			width: 200px;
+			margin: 200px auto auto 300px;
+		}
+		li{
+			cursor: pointer;
+			list-style: none;
+			height: 35px;
+			background-color: #A9D5F4;
+		}
+		li:first-child{
+			background-color: pink;
+		}
+		li:last-child{
+			background-color: #baeae7;
+		}
+		.btn{
+			cursor: pointer;
+			border: none;
+			width: 100%;
+			height: 35px;
+			border-top: 2px solid #ccc;
+			background-color: #e9e9e9;
+		}
+		.showcase{
+			height: 142px;
+			border: 2px solid #ccc;
+		}
+		.hide{
+			display: none;
+		}
+		.show{
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<!-- 左边控制 -->
+	<section class="dropdown">
+		<button class="btn" id="controller">
+			click me
+		</button>
+		<ul class="hide" id="choose">
+			<li data-id="1"></li>
+			<li data-id="2"></li>
+			<li data-id="3"></li>
+		</ul>
+	</section>
+
+	<!-- 右边方块 -->
+	<section class="showcase" id="showcase"></section>
+	<script src="o2.js"></script>
+</body>
+</html>
