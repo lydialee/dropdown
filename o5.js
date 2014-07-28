@@ -1,29 +1,35 @@
+var controller = $('#controller'),
+	colorBar = $('#choose'),
+	stage = $('#showcase');
+
+
+
 var a = {
 	init: function() {
 		var self = this
-		$('#controller').on('click', function() {
-			$(self).trigger('open')
+		controller.on('click', function() {
+			$(self).trigger('open');
 		})
-		$('#choose').on('click', 'li', function() {
+		colorBar.on('click', 'li', function() {
 			var color = $(this).css('background-color')
 			self.choose(color)
 		})
 	},
 	open: function(){
-		$('#choose').toggle()
+		colorBar.toggle()
 	},
 	choose: function(color) {
-		$(this).trigger('choose', [color])
+		$(this).trigger('choose', color)
 	}
 }
 
 var b = {
 	init: function(target){
 		$(target).on('open', function() {
-			$('#showcase').toggle()
+			stage.toggle()
 		})
 		$(target).on('choose', function(e, color) {
-			$('#showcase').css('background-color', color)
+			stage.css('background-color', color)
 		})
 	}
 }
