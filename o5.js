@@ -2,8 +2,6 @@ var controller = $('#controller'),
 	colorBar = $('#choose'),
 	stage = $('#showcase');
 
-
-
 var a = {
 	init: function() {
 		var self = this
